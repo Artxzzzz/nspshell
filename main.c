@@ -1,5 +1,6 @@
 #include "packages/config.h"
 #include "welcome/welcome.h"
+#include "exec/exec.h"
 
 #include <stdio.h>
 #include <string.h>
@@ -20,6 +21,8 @@ int main(int argc, char **argv) {
         if (strcmp(command, "exit") == 0) {
             break;
         }
+
+        exec(command);
     }
 
     return 0;
