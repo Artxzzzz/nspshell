@@ -1,5 +1,5 @@
 #include "config.h"
-#include "../builtin/cd.h"
+#include "../builtin/builtin.h"
 
 #include <stdlib.h>
 #include <stddef.h>
@@ -7,12 +7,13 @@
 
 /* ==================== CONSTANTS ==================== */
 
-const char *prompt = " >>";
-const char *version = "v0.1.0-beta";
+const char *prompt = " >> ";
+const char *version = "v0.1.2-beta";
 typedef int (*builtinFunc)(char *args);
 
 const struct builtin builtins[] = {
-    {"cd", cd}
+    {"cd", cd},
+    {"exit", exitfunc}
 };
 
 const size_t builtinSize = sizeof(builtins) / sizeof(builtins[0]);

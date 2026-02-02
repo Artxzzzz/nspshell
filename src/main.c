@@ -18,10 +18,6 @@ int main(int argc, char **argv) {
         fgets(command, sizeof(command), stdin);
         command[strcspn(command, "\n")] = 0;
 
-        if (strcmp(command, "exit") == 0) { // If command is exit
-            break;
-        }
-
         exec(command); // Execute command
     }
 
