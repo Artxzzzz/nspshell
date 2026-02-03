@@ -1,0 +1,1 @@
+Note: This project requires external dependencies. Please ensure the necessary binaries are available in your PATH before running.

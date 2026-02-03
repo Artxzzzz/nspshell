@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "..\\packages\\config.h"
+#include "..\\..\\packages\\config.h"
 
 int cd(char *path) {
     char fullPath[MAX_PATH];

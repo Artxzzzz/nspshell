@@ -1,7 +1,7 @@
 #ifndef BUILTIN_H
 #define BUILTIN_H
 
-#include "exit.h"
-#include "cd.h"
+#include "exit/exit.h"
+#include "cd/cd.h"
 
 #endif
