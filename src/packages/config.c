@@ -13,7 +13,8 @@ typedef int (*builtinFunc)(char *args);
 
 const struct builtin builtins[] = {
     {"cd", cd},
-    {"exit", exitfunc}
+    {"exit", exitfunc},
+    {"pwd", pwd}
 };
 
 const size_t builtinSize = sizeof(builtins) / sizeof(builtins[0]);
