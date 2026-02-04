@@ -1,4 +1,6 @@
-int clear(char *args) {
+#include <stdlib.h>
+
+int main(char *args) {
     (void)args;
 
     system("cls");
