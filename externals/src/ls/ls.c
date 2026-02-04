@@ -27,5 +27,6 @@ int main(int argc, char *argv[]) {
     } while (FindNextFileA(hFind, &fd));
 
     FindClose(hFind);
+    
     return 0;
 }
