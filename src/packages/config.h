@@ -21,7 +21,7 @@ extern const size_t builtinSize;
 
 // ===================================================
 
-extern char* actualPath;
+extern char actualPath[];
 void initPath(void);
 
 #endif

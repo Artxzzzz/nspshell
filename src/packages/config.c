@@ -21,12 +21,16 @@ const size_t builtinSize = sizeof(builtins) / sizeof(builtins[0]);
 
 // ===================================================
 
-char *actualPath = NULL;
+char actualPath[MAX_PATH];
+
 void initPath() {
     char* home = getenv("HOME");
-    actualPath = (home != NULL) ? home : getenv("USERPROFILE");
+    if (home == NULL) home = getenv("USERPROFILE");
+    if (home == NULL) home = ".";
 
-    if (actualPath != NULL) {
-        SetCurrentDirectoryA(actualPath);
-    }
+    strncpy(actualPath, home, MAX_PATH - 1);
+    actualPath[MAX_PATH - 1] = '\0';
+
+    SetCurrentDirectoryA(actualPath);
 }
+

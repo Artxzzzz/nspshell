@@ -4,4 +4,5 @@
 
 int pwd(char *args) {
     printf("%s\n", actualPath);
+    return 0;
 }
