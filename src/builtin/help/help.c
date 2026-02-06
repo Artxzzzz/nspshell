@@ -48,7 +48,10 @@ int help(char *args) {
                 printf("====================== Externals Command ======================\n"); // Visual
 
                 do { // Loop to show
-                    printf("%s\n", findFileData.cFileName);
+                    const char* dot = strrchr(findFileData.cFileName, '.');
+                    size_t len = dot ? (size_t)(dot - findFileData.cFileName) : strlen(findFileData.cFileName);
+                    printf("%.*s\n", (int)len, findFileData.cFileName);
+
                 } while (FindNextFile(hFind, &findFileData) != 0);
 
                 FindClose(hFind);
