@@ -5,7 +5,6 @@ int main(int argc, char *argv[]) {
 
     char *path;
     if (argc < 2) {
-        // Sem argumento, usa diretório atual
         path = ".";
     } else {
         path = argv[1];
