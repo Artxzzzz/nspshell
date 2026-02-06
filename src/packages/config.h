@@ -12,6 +12,7 @@ typedef int (*builtinFunc)(char *args);
 
 struct builtin {
     const char *name;
+    const char *tip;
     builtinFunc func;
 };
 

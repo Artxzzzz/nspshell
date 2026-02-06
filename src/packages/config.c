@@ -11,10 +11,11 @@ const char *prompt = " >> ";
 const char *version = "v0.1.2-beta";
 typedef int (*builtinFunc)(char *args);
 
-const struct builtin builtins[] = {
-    {"cd", cd},
-    {"exit", exitfunc},
-    {"pwd", pwd}
+const struct builtin builtins[] = { // name, tip, function
+    {"cd", "alter actual directory", cd},
+    {"exit", "exit of the shell" , exitfunc},
+    {"pwd", "show actual directory", pwd},
+    {"help", "show this message", help}
 };
 
 const size_t builtinSize = sizeof(builtins) / sizeof(builtins[0]);
