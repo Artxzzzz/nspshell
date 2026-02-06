@@ -18,6 +18,10 @@ int main() {
         fgets(command, sizeof(command), stdin);
         command[strcspn(command, "\n")] = 0;
 
+        if (command[0] == '\0') { // prevents ": Command not found"
+            continue;
+        }
+
         exec(command); // Execute command
     }
 

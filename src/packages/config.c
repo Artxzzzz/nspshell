@@ -27,7 +27,6 @@ void initPath() {
     actualPath = (home != NULL) ? home : getenv("USERPROFILE");
 
     if (actualPath != NULL) {
-        // Sincroniza diretório real do processo com actualPath
         SetCurrentDirectoryA(actualPath);
     }
 }
