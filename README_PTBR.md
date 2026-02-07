@@ -24,6 +24,9 @@
 ## 📝 Descrição
 **NSPShell** é um programa em **C** que faz coisas incríveis de forma rápida e eficiente.
 
+🌐 [Read this README in English](README.md)
+
+
 ## ⚙️ Requisitos
 - **GCC** ou **Clang**
 - Sistema operacional: **Windows**

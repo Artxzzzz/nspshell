@@ -25,6 +25,8 @@
 
 **NSPShell** is a **C** program that does amazing things quickly and efficiently.
 
+🌐 [Leia esse README em português](README_PTBR.md)
+
 ## ⚙️ Requirements
 
 * **GCC** or **Clang**
