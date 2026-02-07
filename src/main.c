@@ -5,7 +5,14 @@
 #include <stdio.h>
 #include <string.h>
 
-int main() {
+int main(int argc, char **argv) {
+    if (argc > 1) {
+        if (strcmp(argv[1], "--version") == 0) {
+            printf("NSPShell %s\n", version);
+            return 0;
+        }
+    }
+
     welcomeMessage();
     initPath();
 
