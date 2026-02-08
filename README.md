@@ -14,9 +14,10 @@
     <img src="https://img.shields.io/github/license/Artxzzzz/nspshell?cacheSeconds=300" alt="License">
   </a>
   <img src="https://img.shields.io/github/stars/Artxzzzz/nspshell?cacheSeconds=300" alt="GitHub stars">
-  <img src="https://img.shields.io/github/v/release/Artxzzzz/nspshell?cacheSeconds=300" alt="Latest release">
+  <a href="https://github.com/Artxzzzz/nspshell/releases/latest">
+    <img src="https://img.shields.io/github/v/release/Artxzzzz/nspshell?cacheSeconds=300" alt="Latest release">
+  </a>
 </p>
-
 
 <br><br>
 
