@@ -5,13 +5,14 @@
 <br><br>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/language-C-blue" alt="C">
+  <img src="https://img.shields.io/badge/language-C-blue??cacheSeconds=300" alt="C">
   <a href="LICENSE">
-    <img src="https://img.shields.io/github/license/Artxzzzz/nspshell" alt="License">
+    <img src="https://img.shields.io/github/license/Artxzzzz/nspshell?cacheSeconds=300" alt="License">
   </a>
-  <img src="https://img.shields.io/github/stars/Artxzzzz/nspshell" alt="GitHub stars">
-  <img src="https://img.shields.io/github/v/release/Artxzzzz/nspshell" alt="Latest release">
+  <img src="https://img.shields.io/github/stars/Artxzzzz/nspshell?cacheSeconds=300" alt="GitHub stars">
+  <img src="https://img.shields.io/github/v/release/Artxzzzz/nspshell?cacheSeconds=300" alt="Latest release">
 </p>
+
 
 <br><br>
 
