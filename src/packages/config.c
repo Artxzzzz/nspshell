@@ -8,7 +8,7 @@
 /* ==================== CONSTANTS ==================== */
 
 const char *prompt = " >> ";
-const char *version = "v1.0.1";
+const char *version = "v1.0.4";
 typedef int (*builtinFunc)(char *args);
 
 const struct builtin builtins[] = { // name, tip, function
