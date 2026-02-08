@@ -4,6 +4,14 @@
 #include "exec.h"
 #include "../packages/config.h"
 
+BOOL WINAPI CtrlHandler(DWORD fdwCtrlType) {
+    switch (fdwCtrlType) {
+        case CTRL_C_EVENT:
+            return TRUE; 
+        default:
+            return FALSE;
+    }
+}
 
 void exec(char *cmd) {
     /* ==================== Built-In ==================== */
@@ -28,6 +36,8 @@ void exec(char *cmd) {
     STARTUPINFO si = {0};
     PROCESS_INFORMATION pi = {0};
     si.cb = sizeof(si);
+
+    SetConsoleCtrlHandler(CtrlHandler, TRUE);
 
     if (!CreateProcess(
         NULL,
