@@ -1,17 +1,19 @@
-
 <p align="center">
-  <img width="445" height="134" alt="NSPSh logo" src="https://github.com/user-attachments/assets/e0fbb677-8cb6-49e4-8b1c-5bedb96a6d7a" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/e0fbb677-8cb6-49e4-8b1c-5bedb96a6d7a">
+    <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/e1a33172-506a-4a4f-914d-3076500ea5a6">
+    <img width="445" height="134" alt="NSPSh logo" src="https://github.com/user-attachments/assets/e1a33172-506a-4a4f-914d-3076500ea5a6" />
+  </picture>
 </p>
-
 <br><br>
 
 <p align="center">
   <img src="https://img.shields.io/badge/language-C-blue" alt="C">
   <a href="LICENSE">
-    <img src="https://img.shields.io/github/license/Artxzzzz/nspshell" alt="License">
+    <img src="https://img.shields.io/github/license/Artxzzzz/nspshell?cacheSeconds=300" alt="License">
   </a>
-  <img src="https://img.shields.io/github/stars/Artxzzzz/nspshell" alt="GitHub stars">
-  <img src="https://img.shields.io/github/v/release/Artxzzzz/nspshell" alt="Latest release">
+  <img src="https://img.shields.io/github/stars/Artxzzzz/nspshell?cacheSeconds=300" alt="GitHub stars">
+  <img src="https://img.shields.io/github/v/release/Artxzzzz/nspshell?cacheSeconds=300" alt="Latest release">
 </p>
 
 <br><br> 
