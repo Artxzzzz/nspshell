@@ -23,7 +23,7 @@
 
 ## 📝 Description
 
-**NSPShell** is a **C** program that does amazing things quickly and efficiently.
+**NSPShell** is a shell written in **C**, inspired by **UNIX-like** shells, developed for study purposes and use in a **Windows** environment. It features built-in commands and supports executing external programs via the system **PATH**.
 
 🌐 [Leia esse README em português](README_PTBR.md)
 

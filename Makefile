@@ -22,7 +22,7 @@ $(BUILD_DIR)/%.o: $(SRC_DIR)/%.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 nobuild: all
-	@sleep 0.85 # prevents race condition, if you remove, have the chance of dont work, if you remove you are a devil
+	@sleep 0.35 # prevents race condition, if you remove, have a very low chance of dont work, its a hack, i know
 
 	rm -rf ../build
 

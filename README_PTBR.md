@@ -22,7 +22,7 @@
   _Comandos externos apenas funcionarão se você os adicioná-los na **PATH** do usuário ou sistema._
 
 ## 📝 Descrição
-**NSPShell** é um programa em **C** que faz coisas incríveis de forma rápida e eficiente.
+ **NSPShell** é um shell feito em **C**, inspirado em shells **UNIX-like**, desenvolvido para estudo e uso em ambiente **Windows**. Possui comandos internos e suporte à execução de programas externos via **PATH**.
 
 🌐 [Read this README in English](README.md)
 
