@@ -1,51 +1,10 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
-#include <windows.h>
+#include <stdlib.h>
 
 #include "../../packages/config.h"
-
-
-void searchExternals(char *ext, const char *pathEnv, int *extHeader) {
-    char copy[4096];
-    strncpy(copy, pathEnv, sizeof(copy));
-    copy[sizeof(copy)-1] = '\0';
-
-    char *dir = strtok(copy, ";");
-
-    while (dir != NULL) {
-        if (strstr(dir, "externals") == NULL) { // If dir are externals, continue and go to next dir
-            dir = strtok(NULL, ";");
-            continue;
-        }
-
-        char searchPath[4096];
-
-        snprintf(searchPath, sizeof(searchPath), "%s\\*.%s", dir, ext);
-
-        WIN32_FIND_DATA findFileData;
-        HANDLE hFind = FindFirstFile(searchPath, &findFileData);
-
-        if (hFind != INVALID_HANDLE_VALUE) {
-            if (!*extHeader) {
-                printf("====================== Externals Command ======================\n"); // Visual
-                *extHeader = 1;
-            }
-
-            do { // Loop to show
-                const char* dot = strrchr(findFileData.cFileName, '.');
-                size_t len = dot ? (size_t)(dot - findFileData.cFileName) : strlen(findFileData.cFileName);
-
-                printf("%.*s\n", (int)len, findFileData.cFileName);
-
-            } while (FindNextFile(hFind, &findFileData) != 0);
-
-            FindClose(hFind);
-        }
-
-        dir = strtok(NULL, ";");
-    }
-}
+#include "tip/tips.h"
+#include "search/search.h"
 
 int help(char *args) {
     (void)args; // invalidate args

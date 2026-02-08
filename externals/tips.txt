@@ -1,0 +1,7 @@
+// Format of lines: command - tip;
+// Example: ls-list files;
+
+
+ls-list files and directories;
+color-change terminal color;
+clear-clear the terminal screen;

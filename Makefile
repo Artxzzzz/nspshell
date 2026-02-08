@@ -3,7 +3,7 @@ CFLAGS = -Wall -Wextra -Wpedantic -Wshadow -Wconversion -O0
 
 SRC_DIR = src
 BUILD_DIR = build
-SRC = $(wildcard $(SRC_DIR)/*.c) $(wildcard $(SRC_DIR)/*/*.c) $(wildcard $(SRC_DIR)/*/*/*.c)
+SRC = $(shell find $(SRC_DIR) -name "*.c")
 OBJ = $(patsubst $(SRC_DIR)/%.c,$(BUILD_DIR)/%.o,$(SRC))
 BIN = nspsh
 

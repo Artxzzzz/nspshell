@@ -5,6 +5,10 @@
 
 /* ==================== CONSTANTS ==================== */
 
+#define MAX_PATH_LEN 4096
+#define MAX_TIP_LEN 1024
+#define MAX_TIPS 100
+
 extern const char *prompt;
 extern const char *version;
 
