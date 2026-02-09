@@ -7,6 +7,24 @@
 int cd(char *path) {
     char fullPath[MAX_PATH];
 
+    if (path[0] == '\0' || path[0] == '~') {
+        char *home = getenv("HOME");
+        if (!home) home = getenv("USERPROFILE");
+
+        if (home) {
+            static char expanded[MAX_PATH];
+
+            if (path[0] == '\0') {
+                snprintf(expanded, sizeof(expanded), "%s", home);
+            }else {
+                snprintf(expanded, sizeof(expanded), "%s%s", home, path + 1);
+            }
+
+            path = expanded;
+        }
+    }
+
+
     if (!SetCurrentDirectoryA(path)) {
         DWORD err = GetLastError();
         switch(err) {

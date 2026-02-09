@@ -14,7 +14,7 @@ void searchExternals(const char *ext, const char *pathEnv, int *extHeader) {
     char *dir = strtok(copy, ";");
 
     while (dir != NULL) {
-        if (strstr(dir, "externals") == NULL) { // If dir are externals, continue and go to next dir
+        if (strstr(dir, "externals") == NULL) { // If dir not are externals, continue and go to next dir
             dir = strtok(NULL, ";");
             continue;
         }

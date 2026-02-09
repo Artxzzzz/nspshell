@@ -20,6 +20,6 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    printf("color: '%s' not found", color);
+    printf("color: \"%s\" not found\n", color);
     return 1;
 }
