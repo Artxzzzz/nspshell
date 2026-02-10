@@ -26,7 +26,6 @@ int main(int argc, char **argv) {
         
         printf("[%s]", actualPath); // Show actualPath
         printf(prompt); // Show prompt
-        fflush(stdin);
 
         if (!fgets(command, sizeof(command), stdin)) {
 
