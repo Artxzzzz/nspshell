@@ -1,6 +1,6 @@
 #ifndef PWD_H
 #define PWD_H
 
-int pwd(char *args);
+int pwd(int argc, char **argv);
 
 #endif

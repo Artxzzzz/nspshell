@@ -7,16 +7,17 @@
 #include "tip/tips.h"
 #include "search/search.h"
 
-int help(char *args) {
+int help(int argc, char **argv) {
     const char *pathEnv = getenv("PATH");  // Get env from path
     int inPath = strstr(pathEnv, "externals") != NULL; // a bool if externals in path
 
-    if (*args != '\0') {
-        for (int c = 0; args[c] != '\0'; c++) args[c] = tolower((unsigned char) args[c]);
+
+    if (argc > 1) {
+        for (int c = 0; argv[1][c] != '\0'; c++) argv[1][c] = tolower((unsigned char) argv[1][c]);
 
         for (int func = 0; func < builtinSize; func++) {
 
-            if (strcmp(args, builtins[func].name) == 0) {
+            if (strcmp(argv[1], builtins[func].name) == 0) {
                 printf("%s: %s\n", builtins[func].name, builtins[func].tip);
                 return 0;
             }
@@ -41,7 +42,7 @@ int help(char *args) {
         loadTips(dir, tips, &tipCount);
 
         for (int func = 0; func < tipCount; func++) {
-            if (strcmp(args, tips[func].command) == 0) {
+            if (strcmp(argv[1], tips[func].command) == 0) {
                 printf("%s: %s\n", tips[func].command, tips[func].tip);
                 return 0;
             }
@@ -50,7 +51,7 @@ int help(char *args) {
         dir = strtok(NULL, ";");
     }
 
-        printf("%s: not found\n", args);
+        printf("%s: not found\n", argv[1]);
         return 1;
     }
 

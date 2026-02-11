@@ -1,5 +1,6 @@
 #include <windows.h>
 #include <stdio.h>
+#include <string.h>
 
 #include "exec.h"
 #include "../packages/config.h"
@@ -25,7 +26,21 @@ void exec(char *cmd) {
             char *args = cmd + len;
             if (*args == ' ') args++;
 
-            builtins[i].func(args);
+            char *argv[64];
+            int argc = 0;
+
+            argv[argc++] = builtins[i].name;
+
+            char *tok = strtok(args, " ");
+            while (tok && argc < 63) {
+                argv[argc++] = tok;
+                tok = strtok(NULL, " ");
+            }
+            argv[argc] = NULL;
+
+            builtins[i].func(argc, argv);
+
+
             return;
         }
     }

@@ -4,8 +4,16 @@
 
 #include "..\\..\\packages\\config.h"
 
-int cd(char *path) {
+int cd(int argc, char **argv) {
     char fullPath[MAX_PATH];
+    char *path;
+
+    if (argc < 2) {
+        path = "";
+    }
+    else {
+        path = argv[1];
+    }
 
     if (path[0] == '\0' || path[0] == '~') {
         char *home = getenv("HOME");

@@ -9,7 +9,6 @@
 
 const char *prompt = " >> ";
 const char *version = "v1.0.7";
-typedef int (*builtinFunc)(char *args);
 
 const struct builtin builtins[] = { // name, tip, function
     {"cd", "alter actual directory", cd},

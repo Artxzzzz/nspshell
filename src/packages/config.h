@@ -12,7 +12,7 @@
 extern const char *prompt;
 extern const char *version;
 
-typedef int (*builtinFunc)(char *args);
+typedef int (*builtinFunc)(int argc, char **argv);
 
 struct builtin {
     const char *name;
