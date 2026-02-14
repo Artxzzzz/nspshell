@@ -11,7 +11,7 @@
 /* ==================== CONSTANTS ==================== */
 
 const char *prompt = " >> ";
-const char *version = "v1.0.7";
+const char *version = "v1.0.8";
 
 const struct builtin builtins[] = { // name, tip, function
     {"cd", "alter actual directory", cd},
