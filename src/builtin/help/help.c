@@ -57,7 +57,7 @@ int help(int argc, char **argv) {
 
     /* ==================== Built-In Help ==================== */
 
-    printf("====================== Built-in Command ======================\n"); // Visual
+    printf("\n---------- Built-in Command ---------- \n"); // Visual
 
     for (int func = 0; func < builtinSize; func++) {
         printf("%s: %s\n", builtins[func].name, builtins[func].tip);

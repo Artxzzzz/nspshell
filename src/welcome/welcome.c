@@ -18,8 +18,6 @@ char *logo[] = {
 int lines = sizeof(logo) / sizeof(logo[0]);
 
 void welcomeMessage(void) {
-    printf("\x1b[32m");
-
     float interval = .07;
 
     // Logo
@@ -47,6 +45,7 @@ void welcomeMessage(void) {
         "*  This system is for personal or limited use only.    *",
         "*  Commercial use is not permitted without permission. *",
         "*  License terms apply.                                *",
+        "*  Type 'help' to get started.                         *",
         "*                                                      *",
         "********************************************************",
         ""

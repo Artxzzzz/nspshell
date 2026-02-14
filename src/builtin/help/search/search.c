@@ -31,7 +31,7 @@ void searchExternals(const char *ext, const char *pathEnv, int *extHeader) {
 
         if (hFind != INVALID_HANDLE_VALUE) {
             if (!*extHeader) {
-                printf("====================== Externals Command ======================\n"); // Visual
+                printf("\n---------- Externals Command ---------- \n"); // Visual
                 *extHeader = 1;
             }
 
