@@ -11,15 +11,19 @@ BOOL WINAPI CtrlHandler(DWORD fdwCtrlType);
 int main(int argc, char **argv) {
     SetConsoleCtrlHandler(CtrlHandler, TRUE);
     SetConsoleOutputCP(CP_UTF8);
+    int skip = 0;
 
     if (argc > 1) {
         if (strcmp(argv[1], "--version") == 0) {
             printf("NSPShell %s\n", version);
             return 0;
         }
+        else if (strcmp(argv[1], "--skip") == 0) {
+            skip = 1;
+        }
     }
 
-    welcomeMessage();
+    if (!skip) welcomeMessage();
     init();
 
     while (1) {
