@@ -10,6 +10,7 @@ BOOL WINAPI CtrlHandler(DWORD fdwCtrlType);
 
 int main(int argc, char **argv) {
     SetConsoleCtrlHandler(CtrlHandler, TRUE);
+    SetConsoleOutputCP(CP_UTF8);
 
     if (argc > 1) {
         if (strcmp(argv[1], "--version") == 0) {
