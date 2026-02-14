@@ -5,5 +5,6 @@
 #include "cd/cd.h"
 #include "pwd/pwd.h"
 #include "help/help.h"
+#include "alias/alias.h"
 
 #endif

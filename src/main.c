@@ -19,10 +19,10 @@ int main(int argc, char **argv) {
     }
 
     welcomeMessage();
-    initPath();
+    init();
 
     while (1) {
-        char command[256] = {0};
+        char command[MAX_CMD_LEN] = {0};
         
         printf("[%s]", actualPath); // Show actualPath
         printf(prompt); // Show prompt

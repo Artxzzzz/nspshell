@@ -9,6 +9,11 @@
 #define MAX_TIP_LEN 1024
 #define MAX_TIPS 100
 
+#define MAX_ALIAS 1000
+#define MAX_ALIAS_LEN 1024
+
+#define MAX_CMD_LEN 256
+
 extern const char *prompt;
 extern const char *version;
 
@@ -26,7 +31,10 @@ extern const size_t builtinSize;
 
 // ===================================================
 
+extern char configFolder[];
 extern char actualPath[];
-void initPath(void);
+extern char pathCopy[];
+
+void init(void);
 
 #endif
