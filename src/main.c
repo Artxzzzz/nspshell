@@ -13,8 +13,6 @@ int main(int argc, char **argv) {
     SetConsoleCtrlHandler(CtrlHandler, TRUE);
     SetConsoleOutputCP(CP_UTF8);
     int skip = 0;
-    static const char *MAGENTA = "\x1b[35m";
-    static const char *RESET = "\x1b[0m";
 
     if (argc > 1) {
         if (strcmp(argv[1], "--version") == 0) {
@@ -41,9 +39,9 @@ int main(int argc, char **argv) {
         char command[MAX_CMD_LEN] = {0};
 
         printf(
-            "(%s%s%s@%s%s%s) %s", 
-            MAGENTA, username, RESET, 
-            MAGENTA, hostname, RESET, 
+            "(%s@%s) %s", 
+            username,
+            hostname, 
             actualPath
         ); // Show user, host and actualPath
         
