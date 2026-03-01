@@ -100,11 +100,12 @@ void exec(char *cmd) {
         &pi
     )) {
         printf("%s: Command not found\n", cmd);
-        return;
     }
 
     WaitForSingleObject(pi.hProcess, INFINITE);
     CloseHandle(pi.hProcess);
     CloseHandle(pi.hThread);
+
+    return;
 
 }

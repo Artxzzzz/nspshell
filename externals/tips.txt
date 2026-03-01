@@ -5,3 +5,4 @@
 ls-list files and directories;
 color-change terminal color;
 clear-clear the terminal screen;
+echo-show you input in the terminal screen;

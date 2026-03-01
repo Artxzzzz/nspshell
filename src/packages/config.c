@@ -7,6 +7,7 @@
 #include <stdio.h>
 #include <windows.h>
 #include <direct.h>
+#include <lmcons.h>
 
 /* ==================== CONSTANTS ==================== */
 
@@ -29,7 +30,18 @@ char actualPath[MAX_PATH];
 char configFolder[MAX_PATH];
 char pathCopy[MAX_PATH_LEN];
 
-void init() {
+void init(char *username, char *hostname) {
+    BOOL WINAPI CtrlHandler(DWORD fdwCtrlType);
+
+    SetConsoleCtrlHandler(CtrlHandler, TRUE);
+    SetConsoleOutputCP(CP_UTF8);
+
+    DWORD usernameLen = UNLEN+1;
+    GetUserNameA(username, &usernameLen);
+
+    DWORD hostnameLen = MAX_COMPUTERNAME_LENGTH + 1;
+    GetComputerNameA(hostname, &hostnameLen);
+
     char* home = getenv("HOME");
     if (home == NULL) home = getenv("USERPROFILE");
     if (home == NULL) home = ".";

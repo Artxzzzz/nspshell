@@ -7,11 +7,14 @@
 #include <windows.h>
 #include <lmcons.h>
 
-BOOL WINAPI CtrlHandler(DWORD fdwCtrlType);
+#define MAGENTA "\x1b[35m"
+#define RESET "\x1b[0m"
 
 int main(int argc, char **argv) {
-    SetConsoleCtrlHandler(CtrlHandler, TRUE);
-    SetConsoleOutputCP(CP_UTF8);
+    char username[UNLEN+1];
+    char hostname[MAX_COMPUTERNAME_LENGTH + 1];
+    init(username, hostname);
+
     int skip = 0;
 
     if (argc > 1) {
@@ -24,24 +27,19 @@ int main(int argc, char **argv) {
         }
     }
 
-    if (!skip) welcomeMessage();
+    if (!skip) welcomeMessage(); // If dont have the skip flag, show welcome message
     
-    char username[UNLEN+1];
-    DWORD username_len = UNLEN+1;
-    GetUserNameA(username, &username_len);
-
-    char hostname[MAX_COMPUTERNAME_LENGTH + 1];
-    DWORD hostname_len = sizeof(hostname);
-    GetComputerNameA(hostname, &hostname_len);
-    init();
-
     while (1) {
         char command[MAX_CMD_LEN] = {0};
 
         printf(
-            "(%s@%s) %s", 
+            "(%s%s%s@%s%s%s) %s",
+            MAGENTA,
             username,
-            hostname, 
+            RESET,
+            MAGENTA,
+            hostname,
+            RESET,
             actualPath
         ); // Show user, host and actualPath
         

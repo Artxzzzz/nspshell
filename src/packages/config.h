@@ -35,6 +35,6 @@ extern char configFolder[];
 extern char actualPath[];
 extern char pathCopy[];
 
-void init(void);
+void init(char *username, char *hostname);
 
 #endif
